@@ -6,6 +6,8 @@ export default function ItemsList(props) {
   const { items } = props
 
   // We'll grab the current URL using the hook
+  // url tells us where we are (the URL in Chrome) so we don't have to type it all over
+  // if we want to make Links or Routes...
   const { url } = useRouteMatch()
 
   return (
@@ -16,7 +18,7 @@ export default function ItemsList(props) {
           key={item.id}
         >
           {/* 👉 STEP 6 - Link starts, navigates us from <current url> to <current url>/<id of the item> */}
-          <Link to={`/items-list/${item.id}`}>
+          <Link to={`${url}/${item.id}`}>
             <img
               className='items-list-image'
               src={item.imageUrl}
