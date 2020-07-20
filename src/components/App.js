@@ -30,6 +30,12 @@ export default function App(props) {
           {/* 👉 STEP 3 - Make Links to navigate us Home (`/`) and Shop (`/items-list`) */}
           <Link to='/'>Home</Link>
           <Link to='/shop'>Shop</Link>
+
+          {/* the react component would not re-render by just using vanilla History api */}
+          {/* <a href="#" onClick={event => {
+            event.preventDefault()
+            history.pushState(null, null, '/')
+          }}>Home</a> */}
         </div>
       </nav>
 
