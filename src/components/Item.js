@@ -9,6 +9,7 @@ export default function Item(props) {
   const { items } = props
 
   const { itemId } = useParams() // useParams returns object, with the dynamic pieces of URL
+  const { url } = useRouteMatch()
 
   // 👉 STEP 7 - We need to pull item from items, using a parameter in the URL (:itemID)
   // Beware! The ids are integers, whereas URL parameters are strings.
@@ -32,7 +33,8 @@ export default function Item(props) {
 
       <nav className='item-sub-nav'>
         {/* 👉 STEP 8 - Here go the NavLinks to `<current url>/shipping` and `<current url>/description` */}
-        
+        <NavLink to={`${url}/shipping`} />
+        <NavLink to={`${url}/description`} />
       </nav>
 
       {/* 👉 STEP 9 - Here go the Routes for `<current path>/shipping` and `<current path>/description` */}
