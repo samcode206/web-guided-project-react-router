@@ -3,10 +3,13 @@ import React from 'react'
 
 export default function Home() {
   // 👉 STEP 5 - Build a click handler that will imperatively
-  // navigate us to <website base URL>/items-list
+  // navigate us to <website base URL>/items-list <Link to='/items-list' />
 
   const routeToShop = () => {
-
+    // WHY?????
+    // PERHAPS the link shouldn't work unless the user is authed
+    // we need a React Router equivalent of history.pushState
+    // history.pushState(null, null, '/items-list') NOT GONNA WORK
   }
 
   return (
