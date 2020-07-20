@@ -29,7 +29,7 @@ export default function App(props) {
         <div className='nav-links'>
           {/* 👉 STEP 3 - Make Links to navigate us Home (`/`) and Shop (`/items-list`) */}
           <Link to='/'>Home</Link>
-          <Link to='/shop'>Shop</Link>
+          <Link to='/items-list'>Shop</Link>
 
           {/* the react component would not re-render by just using vanilla History api */}
           {/* <a href="#" onClick={event => {
@@ -42,6 +42,10 @@ export default function App(props) {
       {/* 👉 STEP 4 - Build a Switch with a Route for each of the components imported at the top */}
       <Route path='/'>
         <Home />
+      </Route>
+
+      <Route path='/items-list'>
+        <ItemsList />
       </Route>
     </div>
   )
